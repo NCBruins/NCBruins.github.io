@@ -1,205 +1,503 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Registration - North City Bruins</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/bruins-custom.css" />
-	</head>
-	<body class="no-sidebar is-preload">
-		<div id="page-wrapper">
+<html lang="en">
+<head>
+    <title>North City Bruins - Youth Basketball League</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-			<!-- Header -->
-				<section id="header">
+        :root {
+            --navy: #003366;
+            --gold: #FDB927;
+            --light-gray: #f8f9fa;
+            --dark-gray: #2c3e50;
+            --white: #ffffff;
+        }
 
-					<!-- Logo -->
-						<h1><a href="index.html"><img src="images/logo.png" alt="North City Bruins" style="max-height: 60px; vertical-align: middle; background: white; padding: 10px; border-radius: 10px; margin-right: 10px;" /> North City Bruins</a></h1>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="schedule.html">Schedule</a></li>
-								<li><a href="teams.html">Teams</a></li>
-								<li class="current"><a href="registration.html">Registration</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
+        /* Navigation */
+        nav {
+            background: var(--navy);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-				</section>
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
+        .logo {
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-						<!-- Content -->
-							<article class="box post">
-								<header>
-									<h2>Player Registration</h2>
-									<p>Join the North City Bruins Basketball League</p>
-								</header>
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
 
-								<section>
-									<header>
-										<h3>Registration Information</h3>
-									</header>
-									<p><strong>Registration Status:</strong> TBD</p>
-									<p><strong>Season Dates:</strong> TBD</p>
-									<p><strong>Early Bird Deadline:</strong> TBD</p>
-								</section>
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            letter-spacing: 0.3px;
+        }
 
-								<section>
-									<header>
-										<h3>Pricing</h3>
-									</header>
-									<table style="width: 100%; border-collapse: collapse; margin-bottom: 2em;">
-										<thead>
-											<tr style="background-color: #003366; color: white;">
-												<th style="padding: 12px; text-align: left;">Division</th>
-												<th style="padding: 12px; text-align: left;">Early Bird</th>
-												<th style="padding: 12px; text-align: left;">Regular Price</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr style="border-bottom: 1px solid #ddd;">
-												<td style="padding: 12px;">U10 (Ages 8-10)</td>
-												<td style="padding: 12px;">TBD</td>
-												<td style="padding: 12px;">TBD</td>
-											</tr>
-											<tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
-												<td style="padding: 12px;">U12 (Ages 11-12)</td>
-												<td style="padding: 12px;">TBD</td>
-												<td style="padding: 12px;">TBD</td>
-											</tr>
-											<tr style="border-bottom: 1px solid #ddd;">
-												<td style="padding: 12px;">U14 (Ages 13-14)</td>
-												<td style="padding: 12px;">TBD</td>
-												<td style="padding: 12px;">TBD</td>
-											</tr>
-											<tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
-												<td style="padding: 12px;">U16 (Ages 15-16)</td>
-												<td style="padding: 12px;">TBD</td>
-												<td style="padding: 12px;">TBD</td>
-											</tr>
-										</tbody>
-									</table>
-								</section>
+        .nav-links a:hover {
+            color: var(--gold);
+        }
 
-								<section>
-									<header>
-										<h3>What's Included</h3>
-									</header>
-									<ul>
-										<li>Official North City Bruins jersey</li>
-										<li>Practice twice per week</li>
-										<li>12-15 league games</li>
-										<li>End-of-season tournament</li>
-										<li>Professional coaching and development</li>
-										<li>Team photos</li>
-										<li>Awards ceremony</li>
-									</ul>
-								</section>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #001F3F 100%);
+            color: var(--white);
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+        }
 
-								<section>
-									<header>
-										<h3>How to Register</h3>
-									</header>
-									<ol>
-										<li><strong>Complete Registration Form:</strong> TBD</li>
-										<li><strong>Submit Payment:</strong> TBD</li>
-										<li><strong>Submit Required Documents:</strong>
-											<ul>
-												<li>Copy of birth certificate or proof of age</li>
-												<li>Medical release form (provided after registration)</li>
-												<li>Code of conduct agreement (provided after registration)</li>
-											</ul>
-										</li>
-										<li><strong>Confirmation:</strong> You will receive a confirmation email within 48 hours</li>
-									</ol>
-									
-									<div style="text-align: center; margin: 2em 0;">
-										<a href="#" class="button large" style="background-color: #FDB927; color: #003366;">Register Now (TBD)</a>
-									</div>
-								</section>
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-								<section>
-									<header>
-										<h3>Important Dates</h3>
-									</header>
-									<ul>
-										<li><strong>Early Bird Registration Deadline:</strong> TBD</li>
-										<li><strong>Regular Registration Closes:</strong> TBD</li>
-										<li><strong>Season Starts:</strong> TBD</li>
-										<li><strong>Season Ends:</strong> TBD</li>
-										<li><strong>Tournament:</strong> TBD</li>
-									</ul>
-								</section>
+        .hero-logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 2rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            display: block;
+        }
 
-								<section>
-									<header>
-										<h3>Refund Policy</h3>
-									</header>
-									<p>Full refunds are available up to TBD. After this date, refunds will be subject to a $TBD administrative fee. No refunds will be issued after the season starts unless for medical reasons with appropriate documentation.</p>
-								</section>
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
 
-								<section>
-									<header>
-										<h3>Questions?</h3>
-									</header>
-									<p>If you have any questions about registration, please contact us:</p>
-									<p>
-										<strong>Email:</strong> <a href="mailto:info@northcitybruins.ca">info@northcitybruins.ca</a><br />
-										<strong>Phone:</strong> TBD
-									</p>
-								</section>
+        .hero p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 3rem;
+        }
 
-							</article>
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-					</div>
-				</section>
+        .btn {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
 
-			<!-- Footer -->
-				<section id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<section>
-									<header>
-										<h2>Contact Information</h2>
-									</header>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<p><a href="mailto:info@northcitybruins.ca">info@northcitybruins.ca</a></p>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<p>TBD</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-12">
-								<div id="copyright">
-									<ul class="links">
-										<li>&copy; 2026 North City Bruins Basketball League. All rights reserved.</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
 
-		</div>
+        .btn-primary:hover {
+            background: #FFD966;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(253, 185, 39, 0.3);
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
 
-	</body>
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: -2rem auto 3rem;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--navy);
+        }
+
+        .feature-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Event Cards */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .event-card {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .event-card-header {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .event-card-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--navy);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-date {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .event-card-body {
+            padding: 1.5rem;
+        }
+
+        .event-detail {
+            margin-bottom: 0.8rem;
+            color: #666;
+        }
+
+        .event-detail strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        /* Background Section */
+        .bg-section {
+            background: var(--light-gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            line-height: 2;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NORTH CITY BRUINS</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/logo.png" alt="North City Bruins" class="hero-logo">
+            <h1>North City Bruins</h1>
+            <p>Building Champions On and Off the Court</p>
+            <div class="cta-buttons">
+                <a href="registration.html" class="btn btn-primary">Register Now</a>
+                <a href="schedule.html" class="btn btn-secondary">View Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Youth Basketball Excellence</h2>
+            <p class="section-subtitle">Developing skilled players and well-rounded individuals through the power of basketball</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🏀</div>
+                    <h3>Youth Development</h3>
+                    <p>Focused training on fundamental basketball skills while building character, teamwork, and sportsmanship in young athletes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Competitive Play</h3>
+                    <p>Structured league format providing valuable game experience and the thrill of competition for all skill levels.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Community Focus</h3>
+                    <p>Building a supportive community of families and young athletes throughout Toronto and the GTA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Games Section -->
+    <section class="bg-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Games</h2>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-card-header">
+                        <h3>U12 Division</h3>
+                        <div class="event-date">TBD</div>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-detail"><strong>Time:</strong> TBD</div>
+                        <div class="event-detail"><strong>Location:</strong> TBD</div>
+                        <div class="event-detail"><strong>Teams:</strong> TBD vs TBD</div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-header">
+                        <h3>U14 Division</h3>
+                        <div class="event-date">TBD</div>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-detail"><strong>Time:</strong> TBD</div>
+                        <div class="event-detail"><strong>Location:</strong> TBD</div>
+                        <div class="event-detail"><strong>Teams:</strong> TBD vs TBD</div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-header">
+                        <h3>U16 Division</h3>
+                        <div class="event-date">TBD</div>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-detail"><strong>Time:</strong> TBD</div>
+                        <div class="event-detail"><strong>Location:</strong> TBD</div>
+                        <div class="event-detail"><strong>Teams:</strong> TBD vs TBD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">About North City Bruins</h2>
+            <p class="section-subtitle">The North City Bruins Basketball League is dedicated to providing youth in Toronto with a positive, competitive basketball experience. We believe in developing not just skilled players, but well-rounded individuals who understand the values of teamwork, dedication, and sportsmanship.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide a positive environment where young athletes can develop their basketball skills and character.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Age Divisions</h3>
+                    <p>U10, U12, U14, and U16 divisions designed to match skill levels and ensure competitive, fun play.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Professional Coaching</h3>
+                    <p>Experienced coaches dedicated to player development and creating a positive learning environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="teams.html">Teams</a>
+                <a href="registration.html">Registration</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@northcitybruins.ca</p>
+                <p>Phone: TBD</p>
+                <p>Location: Toronto, Ontario, Canada</p>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>The North City Bruins Basketball League provides youth in Toronto with a positive, competitive basketball experience focused on skill development and character building.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 North City Bruins Basketball League. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
