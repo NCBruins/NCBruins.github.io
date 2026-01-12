@@ -1,0 +1,377 @@
+/* North City Bruins Custom Styling - Modern & Sleek */
+
+/* Color Variables */
+:root {
+    --bruins-navy: #003366;
+    --bruins-gold: #FDB927;
+    --bruins-light-gold: #FFD966;
+    --bruins-dark-navy: #001F3F;
+    --text-dark: #2c3e50;
+    --text-light: #ffffff;
+    --bg-light: #f8f9fa;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Override body background */
+body {
+    background: #f8f9fa !important;
+    background-image: none !important;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+/* Header Section - Navy Background */
+#header {
+    background: linear-gradient(135deg, var(--bruins-navy) 0%, var(--bruins-dark-navy) 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 2em 0 !important;
+}
+
+/* Logo Styling */
+#header h1 a {
+    color: var(--bruins-gold) !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+#header h1 a:hover {
+    color: var(--bruins-light-gold) !important;
+    transform: scale(1.02);
+}
+
+/* Navigation */
+#nav ul li a {
+    color: var(--text-light) !important;
+    padding: 0.8em 1.5em !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#nav ul li a:hover,
+#nav ul li.current a {
+    background: var(--bruins-gold) !important;
+    color: var(--bruins-navy) !important;
+    box-shadow: var(--shadow);
+}
+
+/* Banner Section */
+#banner {
+    background: rgba(253, 185, 39, 0.1) !important;
+    border-radius: 15px;
+    margin: 2em auto;
+    padding: 3em 2em !important;
+    backdrop-filter: blur(10px);
+}
+
+#banner h2 {
+    color: var(--text-light) !important;
+    font-size: 2.5em !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#banner p {
+    color: var(--bruins-light-gold) !important;
+    font-size: 1.3em !important;
+    font-weight: 400;
+}
+
+/* Intro Section Icons */
+#intro .icon.featured {
+    background: var(--bruins-gold) !important;
+    color: var(--bruins-navy) !important;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 2em;
+    margin: 0 auto 1em;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+#intro .icon.featured:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+#intro .icon.featured.alt {
+    background: var(--bruins-navy) !important;
+    color: var(--bruins-gold) !important;
+}
+
+#intro .icon.featured.alt2 {
+    background: linear-gradient(135deg, var(--bruins-gold) 0%, var(--bruins-light-gold) 100%) !important;
+    color: var(--bruins-navy) !important;
+}
+
+/* Content Boxes */
+.box {
+    background: white !important;
+    border-radius: 15px !important;
+    padding: 2em !important;
+    box-shadow: var(--shadow) !important;
+    transition: all 0.3s ease;
+    border: none !important;
+    margin-bottom: 2em;
+}
+
+.box:hover {
+    box-shadow: var(--shadow-hover) !important;
+    transform: translateY(-5px);
+}
+
+.box header h3 {
+    color: var(--bruins-navy) !important;
+    font-weight: 700 !important;
+    font-size: 1.5em !important;
+    margin-bottom: 0.5em;
+}
+
+.box header p {
+    color: var(--bruins-gold) !important;
+    font-weight: 600;
+}
+
+/* Buttons */
+.button {
+    background: var(--bruins-gold) !important;
+    color: var(--bruins-navy) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 1em 2.5em !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease !important;
+    box-shadow: var(--shadow);
+}
+
+.button:hover {
+    background: var(--bruins-light-gold) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover) !important;
+}
+
+.button.large {
+    font-size: 1.1em !important;
+    padding: 1.2em 3em !important;
+}
+
+.button.alt {
+    background: var(--bruins-navy) !important;
+    color: var(--bruins-gold) !important;
+}
+
+.button.alt:hover {
+    background: var(--bruins-dark-navy) !important;
+}
+
+/* Tables */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+table thead tr {
+    background: linear-gradient(135deg, var(--bruins-navy) 0%, var(--bruins-dark-navy) 100%) !important;
+}
+
+table thead th {
+    color: var(--text-light) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.2em !important;
+}
+
+table tbody tr {
+    transition: all 0.3s ease;
+}
+
+table tbody tr:hover {
+    background: rgba(253, 185, 39, 0.1) !important;
+}
+
+table tbody td {
+    padding: 1em !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+/* Footer */
+#footer {
+    background: linear-gradient(135deg, var(--bruins-dark-navy) 0%, var(--bruins-navy) 100%) !important;
+    color: var(--text-light) !important;
+    padding: 3em 0 2em !important;
+    margin-top: 4em;
+}
+
+#footer h2, #footer h3, #footer h4 {
+    color: var(--bruins-gold) !important;
+    font-weight: 700 !important;
+}
+
+#footer a {
+    color: var(--bruins-light-gold) !important;
+    transition: all 0.3s ease;
+}
+
+#footer a:hover {
+    color: var(--text-light) !important;
+    text-decoration: none;
+}
+
+#footer .contact li h3 {
+    color: var(--bruins-gold) !important;
+    font-weight: 700;
+}
+
+/* Main Content Area */
+#main {
+    background: transparent !important;
+    padding: 3em 0 !important;
+}
+
+/* Major Headers */
+header.major h2 {
+    color: var(--bruins-navy) !important;
+    font-weight: 700 !important;
+    font-size: 2.5em !important;
+    margin-bottom: 1em;
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+header.major h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--bruins-gold);
+    border-radius: 2px;
+}
+
+/* Article Post Boxes */
+article.post {
+    background: white;
+    border-radius: 15px;
+    padding: 3em;
+    box-shadow: var(--shadow);
+    margin-bottom: 2em;
+}
+
+article.post header h2 {
+    color: var(--bruins-navy) !important;
+    font-weight: 700 !important;
+    font-size: 2.5em !important;
+    margin-bottom: 0.3em;
+}
+
+article.post header h3 {
+    color: var(--bruins-navy) !important;
+    font-weight: 700 !important;
+    font-size: 1.8em !important;
+    margin: 1.5em 0 0.5em;
+    padding-top: 1em;
+    border-top: 2px solid var(--bruins-gold);
+}
+
+article.post header h4 {
+    color: var(--bruins-gold) !important;
+    font-weight: 600 !important;
+    font-size: 1.3em !important;
+    margin: 1em 0 0.5em;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 10px !important;
+    padding: 1em !important;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--bruins-gold) !important;
+    box-shadow: 0 0 0 3px rgba(253, 185, 39, 0.1) !important;
+}
+
+/* Lists */
+ul.divided li {
+    border-bottom: 1px solid rgba(253, 185, 39, 0.2) !important;
+    padding: 0.8em 0;
+}
+
+ul.divided li a {
+    color: var(--text-dark) !important;
+    transition: all 0.3s ease;
+}
+
+ul.divided li a:hover {
+    color: var(--bruins-gold) !important;
+    padding-left: 10px;
+}
+
+/* Copyright */
+#copyright {
+    border-top: 2px solid rgba(253, 185, 39, 0.3) !important;
+    padding-top: 2em;
+    margin-top: 2em;
+}
+
+#copyright ul.links li {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 980px) {
+    #banner h2 {
+        font-size: 2em !important;
+    }
+    
+    header.major h2 {
+        font-size: 2em !important;
+    }
+    
+    .button.large {
+        padding: 1em 2em !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #banner h2 {
+        font-size: 1.5em !important;
+    }
+    
+    #banner p {
+        font-size: 1.1em !important;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background: var(--bruins-gold);
+    color: var(--bruins-navy);
+}
+
+::-moz-selection {
+    background: var(--bruins-gold);
+    color: var(--bruins-navy);
+}
