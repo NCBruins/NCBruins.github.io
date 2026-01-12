@@ -3,501 +3,166 @@
 <head>
     <title>North City Bruins - Youth Basketball League</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --navy: #003366;
-            --gold: #FDB927;
-            --light-gray: #f8f9fa;
-            --dark-gray: #2c3e50;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background: var(--white);
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--navy);
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: var(--gold);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            letter-spacing: 0.3px;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #001F3F 100%);
-            color: var(--white);
-            padding: 8rem 2rem 6rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .hero-logo {
-            max-width: 300px;
-            height: auto;
-            margin: 0 auto 2rem;
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 20px;
-            display: block;
-        }
-
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.4rem;
-            font-weight: 300;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 3rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1.2rem 3rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s;
-            display: inline-block;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--navy);
-        }
-
-        .btn-primary:hover {
-            background: #FFD966;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(253, 185, 39, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--navy);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Section */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--navy);
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: -2rem auto 3rem;
-        }
-
-        /* Features */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2.5rem 2rem;
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: var(--navy);
-        }
-
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--navy);
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Event Cards */
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .event-card {
-            background: var(--white);
-            border: 1px solid #e0e0e0;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .event-card-header {
-            background: var(--light-gray);
-            padding: 1.5rem;
-            border-bottom: 3px solid var(--gold);
-        }
-
-        .event-card-header h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--navy);
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-date {
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .event-card-body {
-            padding: 1.5rem;
-        }
-
-        .event-detail {
-            margin-bottom: 0.8rem;
-            color: #666;
-        }
-
-        .event-detail strong {
-            color: var(--navy);
-            font-weight: 600;
-        }
-
-        /* Background Section */
-        .bg-section {
-            background: var(--light-gray);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.7; color: #333; }
+        
+        /* Nav */
+        nav { background: #003366; padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #FDB927; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.4rem; text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #FDB927; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #003366, #001F3F); color: white; padding: 6rem 2rem; text-align: center; }
+        .hero img { max-width: 250px; background: white; padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.95; }
+        .btn { display: inline-block; padding: 1rem 2.5rem; margin: 0.5rem; font-weight: 600; text-decoration: none; border-radius: 50px; transition: 0.3s; }
+        .btn-primary { background: #FDB927; color: #003366; }
+        .btn-primary:hover { background: #FFD966; transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: #003366; }
+        
+        /* Sections */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #003366; }
+        
+        /* Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 2rem; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .card h3 { font-family: 'Montserrat', sans-serif; color: #003366; margin-bottom: 1rem; }
+        .card-header { background: #f8f9fa; padding: 1.5rem; border-bottom: 3px solid #FDB927; border-radius: 12px 12px 0 0; }
+        
         /* Footer */
-        footer {
-            background: var(--navy);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            line-height: 2;
-            display: block;
-        }
-
-        .footer-section a:hover {
-            color: var(--gold);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            text-align: center;
-            color: rgba(255,255,255,0.6);
-        }
-
-        /* Responsive */
+        footer { background: #003366; color: white; padding: 3rem 2rem 1.5rem; text-align: center; }
+        footer a { color: #FDB927; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
+            .hero h1 { font-size: 2rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">NORTH CITY BRUINS</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="registration.html">Registration</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <a href="#" class="logo">NORTH CITY BRUINS</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="images/logo.png" alt="North City Bruins" class="hero-logo">
-            <h1>North City Bruins</h1>
-            <p>Building Champions On and Off the Court</p>
-            <div class="cta-buttons">
-                <a href="registration.html" class="btn btn-primary">Register Now</a>
-                <a href="schedule.html" class="btn btn-secondary">View Schedule</a>
-            </div>
-        </div>
-    </section>
+    <div class="hero" id="home">
+        <img src="images/logo.png" alt="North City Bruins">
+        <h1>North City Bruins</h1>
+        <p>Building Champions On and Off the Court</p>
+        <a href="#registration" class="btn btn-primary">Register Now</a>
+        <a href="#schedule" class="btn btn-secondary">View Schedule</a>
+    </div>
 
-    <!-- Features Section -->
     <section>
         <div class="container">
-            <h2 class="section-title">Youth Basketball Excellence</h2>
-            <p class="section-subtitle">Developing skilled players and well-rounded individuals through the power of basketball</p>
-            
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">🏀</div>
-                    <h3>Youth Development</h3>
-                    <p>Focused training on fundamental basketball skills while building character, teamwork, and sportsmanship in young athletes.</p>
+            <h2>Youth Basketball Excellence</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🏀 Youth Development</h3>
+                    <p>Focused training on fundamental basketball skills while building character, teamwork, and sportsmanship.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Competitive Play</h3>
-                    <p>Structured league format providing valuable game experience and the thrill of competition for all skill levels.</p>
+                <div class="card">
+                    <h3>🏆 Competitive Play</h3>
+                    <p>Structured league format providing valuable game experience for all skill levels.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Community Focus</h3>
-                    <p>Building a supportive community of families and young athletes throughout Toronto and the GTA.</p>
+                <div class="card">
+                    <h3>👥 Community Focus</h3>
+                    <p>Building a supportive community of families and young athletes throughout Toronto.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Upcoming Games Section -->
-    <section class="bg-section">
+    <section style="background: #f8f9fa;" id="schedule">
         <div class="container">
-            <h2 class="section-title">Upcoming Games</h2>
-            
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <h3>U12 Division</h3>
-                        <div class="event-date">TBD</div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-detail"><strong>Time:</strong> TBD</div>
-                        <div class="event-detail"><strong>Location:</strong> TBD</div>
-                        <div class="event-detail"><strong>Teams:</strong> TBD vs TBD</div>
-                    </div>
+            <h2>Game Schedule</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header"><h3>U10-U12 Divisions</h3></div>
+                    <p style="padding:1rem 0"><strong>Date:</strong> TBD<br><strong>Time:</strong> TBD<br><strong>Location:</strong> TBD</p>
                 </div>
-
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <h3>U14 Division</h3>
-                        <div class="event-date">TBD</div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-detail"><strong>Time:</strong> TBD</div>
-                        <div class="event-detail"><strong>Location:</strong> TBD</div>
-                        <div class="event-detail"><strong>Teams:</strong> TBD vs TBD</div>
-                    </div>
+                <div class="card">
+                    <div class="card-header"><h3>U14 Division</h3></div>
+                    <p style="padding:1rem 0"><strong>Date:</strong> TBD<br><strong>Time:</strong> TBD<br><strong>Location:</strong> TBD</p>
                 </div>
-
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <h3>U16 Division</h3>
-                        <div class="event-date">TBD</div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="event-detail"><strong>Time:</strong> TBD</div>
-                        <div class="event-detail"><strong>Location:</strong> TBD</div>
-                        <div class="event-detail"><strong>Teams:</strong> TBD vs TBD</div>
-                    </div>
+                <div class="card">
+                    <div class="card-header"><h3>U16 Division</h3></div>
+                    <p style="padding:1rem 0"><strong>Date:</strong> TBD<br><strong>Time:</strong> TBD<br><strong>Location:</strong> TBD</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section>
+    <section id="teams">
         <div class="container">
-            <h2 class="section-title">About North City Bruins</h2>
-            <p class="section-subtitle">The North City Bruins Basketball League is dedicated to providing youth in Toronto with a positive, competitive basketball experience. We believe in developing not just skilled players, but well-rounded individuals who understand the values of teamwork, dedication, and sportsmanship.</p>
-            
-            <div class="features">
-                <div class="feature-card">
-                    <h3>Our Mission</h3>
-                    <p>To provide a positive environment where young athletes can develop their basketball skills and character.</p>
+            <h2>Our Teams</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>U10 (Ages 8-10)</h3>
+                    <p><strong>Coach:</strong> TBD<br><strong>Practice:</strong> TBD</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Age Divisions</h3>
-                    <p>U10, U12, U14, and U16 divisions designed to match skill levels and ensure competitive, fun play.</p>
+                <div class="card">
+                    <h3>U12 (Ages 11-12)</h3>
+                    <p><strong>Coach:</strong> TBD<br><strong>Practice:</strong> TBD</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Professional Coaching</h3>
-                    <p>Experienced coaches dedicated to player development and creating a positive learning environment.</p>
+                <div class="card">
+                    <h3>U14 (Ages 13-14)</h3>
+                    <p><strong>Coach:</strong> TBD<br><strong>Practice:</strong> TBD</p>
+                </div>
+                <div class="card">
+                    <h3>U16 (Ages 15-16)</h3>
+                    <p><strong>Coach:</strong> TBD<br><strong>Practice:</strong> TBD</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section style="background: #f8f9fa;" id="registration">
+        <div class="container">
+            <h2>Registration</h2>
+            <div class="card" style="max-width: 700px; margin: 0 auto;">
+                <h3>Join the North City Bruins</h3>
+                <p><strong>Season:</strong> TBD<br><strong>Registration Fee:</strong> TBD<br><strong>What's Included:</strong> Jersey, practice twice per week, 12+ league games, tournament, coaching</p>
+                <br>
+                <a href="mailto:info@northcitybruins.ca" class="btn btn-primary">Contact to Register</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <p><strong>Email:</strong> <a href="mailto:info@northcitybruins.ca">info@northcitybruins.ca</a></p>
+                <p><strong>Phone:</strong> TBD</p>
+                <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="schedule.html">Schedule</a>
-                <a href="teams.html">Teams</a>
-                <a href="registration.html">Registration</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: info@northcitybruins.ca</p>
-                <p>Phone: TBD</p>
-                <p>Location: Toronto, Ontario, Canada</p>
-            </div>
-            <div class="footer-section">
-                <h3>About</h3>
-                <p>The North City Bruins Basketball League provides youth in Toronto with a positive, competitive basketball experience focused on skill development and character building.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 North City Bruins Basketball League. All rights reserved.</p>
-        </div>
+        <p>&copy; 2026 North City Bruins Basketball League</p>
+        <p>Building champions on and off the court 🏀</p>
     </footer>
 </body>
 </html>
